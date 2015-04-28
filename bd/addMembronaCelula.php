@@ -97,21 +97,19 @@ function addMembroNaCelula() {
                     <div class="caption">
                               <h5>Participantes da Celula</h5>
                             </div>
-                            <form action ="" method = "post" onclick="return excluirMembrosCelula();"> 
-                                <select id="listRecept" size="10" name="lis" >
+                            <form id="excluir" action ="" method = "post"> 
+                                <select id="listEx" size="10" name="list" >
                               <?php
                                 for ($index = 0; $index < sizeof($chave); $index++) {
                                     $indice = $chave[$index];
                                    ?>
-                                    <option>
-                                   <font-size:18px><?php echo $lista[$indice]->getNome();?>
-                                </option>
-                                <input type="hidden" name="cod" size="5" maxlength = "20" value = <?php echo $lista[$indice]->getMatricula();?>/>
+                                    <option value=<?php echo $lista[$indice]->getMatricula();?>><?php echo $lista[$indice]->getNome();?></option>
                                 <?php
 				}
                                 ?>
                                 </select>
                                 <br>
+                                <input type="hidden" name="codcelulaExcluir" size="5" maxlength = "20" value ="<?php echo $id;?>"/>
                                 <input type="image" src="ICON/icon-47588_150.png" width="40" height="30" border="0" title = "EXCLUIR MEMBRO"/>
                        </form>
                   </div>

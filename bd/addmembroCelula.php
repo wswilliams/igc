@@ -1,7 +1,8 @@
 <?php
 
 function cadastrar(){
-$ok=0;
+$nome="";
+$mat=0;
   if($_COOKIE['nome']){
 
     if(isset($_POST['matricula']) && isset($_POST['codcelula'])){
@@ -18,10 +19,9 @@ $ok=0;
       
         if($membro->getMatricula() > 0){
 //            $membro = $obj->pesquisarMembroMatriculaControle($pesMatricula);
-            $ok=$membro->getNome();
+            $nome=$membro->getNome();
+            $mat = $membro->getMatricula();
 //            <input type='hidden' name= 'cod' size='5' maxlength = '20' value = ".$membro->getMatricula()."/>";
-          }else{
-           $ok=$membro->getMatricula();
           }
 
      }
@@ -30,7 +30,7 @@ $ok=0;
    }else{
          header('Location: ../index.php?');
    }
-   echo $ok;
+   echo $nome.";".$mat;
    
 }
 cadastrar();
