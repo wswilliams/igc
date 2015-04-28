@@ -1,0 +1,1219 @@
+
+a{
+text-decoration: none;
+font-weight: bold;
+color:#000000;
+outline:none;
+}
+
+*{
+margin:0px;
+padding:0px
+}
+html{
+width:100%;
+height:100%;
+}
+body{
+/*min-width: 412px;*/  
+width:100%;
+margin:0 auto;
+position:relative;
+color: #000000;
+background: rgba(0,0,0,0.1);
+    font-family:Calibri;
+    font-weight: bold;
+    /*overflow-y:scroll;*/
+     font-size: 1em;
+}
+
+div,img{outline:none;}
+
+.box { float: left; }
+#root { max-width: 1200px; margin: 0 auto; }
+
+.root-mastter { max-width: 100%; margin: 0 auto;
+	background-color: #F1F2F7;
+        
+}
+.container1{ max-width: 100%;margin: 0 auto; }
+
+.container2{ max-width: 100%;margin: 0 auto; 
+background-color: #ffffff;
+
+}
+.container3{ max-width: 90%;margin: 0 auto; 
+}
+.container{ max-width: 100%;margin: 0 auto; margin-top: -20px;
+        padding: 0px 0px 0px 0px;
+        background-color: #ffffff;
+        color: #777;
+        text-align: center;
+}
+.baner-titulo{
+    font-size: 30pt;
+    text-shadow: 0.1em 0.1em 0.2em #cccccc;
+}
+.container4-interno{
+     max-width: 100%;margin: 0 auto;
+        background: url("../img/contrucao.jpg");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          height: 400px;
+        color: #767676;
+        text-align: center;
+}
+.container4{ max-width: 100%;margin: 0 auto;
+        background-color: #252C34;
+        opacity:0.7;
+        filter: alpha(opacity=7);
+        -moz-opacity:0.7;
+        height: 400px;
+}
+.container5{ max-width: 100%;margin: 0 auto; margin-top: 0px;
+           background-color: #272727;
+text-align: center;
+border-bottom: 1px solid #000000;
+border-top: 1px solid #000000;
+border-right:  1px solid #000000;
+border-left:  1px solid #000000;
+}
+.container-baner { width: 100%;
+	  height:30em;
+          
+
+ }
+.container-baner-interno { width: 70%;
+margin: -20px 0px 0px 15%;
+background:#cccccc;
+height:30em;
+
+}
+.col-md-5{
+    margin: 25px 0px 0px 5%;
+    width: 30%;
+    height:350px;
+     background: url("../img/IMG_4856.JPG");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          border-radius: 2em
+}
+.col-md-7{
+    width: 60%;
+    margin: 25px 0px 0px 0px;
+    color: #ffffff;
+    text-align: justify;
+}
+.texto-col{
+    font-size: 16pt;
+}
+.sf-menu {
+   z-index:99999999;
+}
+.imagem-centro{
+    width: 100%;
+    /*height: 100%;*/
+    height:16em;
+    position: relative;
+}
+#img_cortina{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+.imagem-modelos{
+    width: 100%;
+    height: 100%;
+}
+#myModal1{
+    font-size: 16px;
+}
+#myModal1 ul{
+    list-style: none;
+}
+.link-pdf a{
+    color: #000066;
+}
+.link-tilulo{
+    color: #000066;
+}
+#rodape { width: 100%;
+	  background: url("../img/tp_home_fundo_rodape.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+	  height:4em;
+ }
+ #nave{
+     background:transparent!important;
+        border-left: transparent;
+        border-right: transparent;
+        border-top:  transparent;
+        border-bottom: transparent;
+/*        z-index: 30;*/
+ }
+ #nave a{outline:none;}
+ 
+ #logo{
+     width: 8em;
+     background: url("../img/tp_home_menu_logo.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+ }
+ 
+ .root-mastter-cabec { width: 100%;
+          background-color:#252C34;
+
+ }
+ .root-mastter-cabec1 { width: 100%;
+	  background-color: #272727;
+ }
+ .root-mastter-cabec2 { width: 100%;margin: 0px 0px 0px 0px;
+/*	  background-color: #272727;
+          border-bottom: 1px solid #cccccc;
+          border-top: 1px solid #cccccc;*/
+ }
+ .navbar-collapse ul{
+/*     background:transparent!important;*/
+     background-color: #252C34 !important;
+ }
+ #myNavbar ul li a{
+     color: #cccccc;
+     font-size: 12pt;
+ }
+ 
+ #myNavbar li a:hover{
+     color: #ffffff;
+ }
+ 
+ 
+ 
+ .thumbnail-img-crianca{
+     /*width: 350px;*/
+     height: 300px;
+     background: url("../img/departamentos/foto 4.jpg");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+ }
+ .thumbnail-img-homens{
+     /*width: 350px;*/
+     height: 300px;
+     background: url("../img/departamentos/homens.jpg");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+ }
+ .thumbnail-img-mulheres{
+     /*width: 350px;*/
+     height: 300px;
+     background: url("../img/departamentos/mulheres.jpg");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+ }
+ .thumbnail-img-jovens{
+     /*width: 350px;*/
+     height: 300px;
+     background: url("../img/departamentos/jovens.jpg");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+ }
+ .thumbnail-img-company{
+     /*width: 350px;*/
+     height: 300px;
+     background: url("../img/departamentos/make-company.jpg");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+ }
+ .thumbnail-img-mda{
+     /*width: 350px;*/
+     height: 300px;
+     background: url("../img/departamentos/mda.jpg");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+ }
+ 
+ 
+ .thumbnail-img-crianca:hover{
+  opacity:0.65;
+  -moz-opacity: 0.65;
+  filter: alpha(opacity=65);  
+ }
+ .thumbnail-img-homens:hover{
+  opacity:0.65;
+  -moz-opacity: 0.65;
+  filter: alpha(opacity=65);  
+ }
+ .thumbnail-img-mulheres:hover{
+  opacity:0.65;
+  -moz-opacity: 0.65;
+  filter: alpha(opacity=65);     
+ }
+ .thumbnail-img-jovens:hover{
+  opacity:0.65;
+  -moz-opacity: 0.65;
+  filter: alpha(opacity=65);     
+ }
+ .thumbnail-img-company:hover{
+  opacity:0.65;
+  -moz-opacity: 0.65;
+  filter: alpha(opacity=65);     
+ }
+ .thumbnail-img-mda:hover{
+  opacity:0.65;
+  -moz-opacity: 0.65;
+  filter: alpha(opacity=65);     
+ }
+ .texto-historico{
+     font-size: 12pt;
+ }
+/*
+entre aqui
+ */
+ 
+/*.container{
+    background-color: #FFFFFF;
+}*/
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 100%;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+#font-text{
+    text-decoration: none;
+    color: #5a5a5a;
+    text-shadow: #000 2px 3px 2px;
+}
+#font-text:hover{
+    color: #104E8B;
+    
+}
+
+.carousel{
+    margin: 0px 0px 0px 0px;
+    height:400px;
+}
+
+.carousel-inner{    
+    height:400px;       
+}
+.item active{
+    height:400px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+.caption{
+    text-align: center;
+}
+.rodape-home{
+    color: #cccccc;
+    font-size: 12px;
+      background-color:#252C34;
+        border-bottom: 1px solid #ffffff;
+        padding: 40px
+}
+#row-featurette{
+/*    margin: 20px 0px 0px 0px;
+    padding: 0px 10px 10px 10px;*/
+}
+.pull-left{
+     background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_serv_menu_logo-04.png");
+background-repeat: no-repeat;
+          -moz-background-size: 100% 10%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          height: 3em;
+          width: 15%;
+}
+.pull-right{
+     background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_serv_menu_logo-04.png");
+background-repeat: no-repeat;
+          -moz-background-size: 100% 10%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          height: 3em;
+          width: 15%;
+}
+#cadastrar-membro label{
+    font-size: 12pt;
+}
+#tx-membro{
+    font-size: 12pt;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+/*Phone Portrait (240px)*/ 
+@media only screen and (min-width: 240px) {
+ 
+ #select-form{
+        width: 100px;
+    }
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+ 
+ .lead{
+     margin: 10px 0px 0px 0px;
+     font-size: 7pt;
+ }
+.container{ max-width: 100%;margin: 0 auto; margin-top: -20px;
+        padding: 0px 0px 0px 0px;
+}
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+    background: rgba(0,0,0,0.1);
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:140px;
+}
+
+.carousel-inner{    
+    height:140px;       
+}
+.item active{
+    height:140px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+ .rodape-home{
+    height:30px;       
+
+ }
+ 
+.root-mastter-cabec { width: 100%;
+                      background-color:#252C34;
+  
+ }
+ .container1 { max-width: 100%;margin: 0 auto; }
+ .container2 { max-width: 100%;margin: 0 auto; }
+ .container3 { max-width: 100%;margin: 0 auto; }
+ .container4 { max-width: 100%;margin: 0 auto; height: 200px;}
+ .container4-interno{
+     max-width: 100%;
+     height: 200px;
+ }
+ .col-md-5{
+    margin: 25px 0px 0px 5%;
+    width: 30%;
+    max-height: 100px;
+     float: right;
+}
+.col-md-7{
+    max-width: 70%;
+    margin: 20px 0px 0px 0px;
+    max-height: 150px;
+}
+.texto-col{
+    font-size: 4pt;
+}
+.fone-cabec{
+    font-size: 7pt;
+}
+.baner-titulo{
+    font-size: 10pt;
+}
+/*#cadastrar-membro label{
+    font-size: 7pt;
+}*/
+}
+
+
+/*Phone Portrait (320px)*/ 
+@media only screen and (min-width: 320px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+ 
+ .lead{
+     margin: 10px 0px 0px 0px;
+     font-size: 7pt;
+ }
+.container{ max-width: 100%;margin: 0 auto; margin-top: -20px;
+        padding: 0px 0px 0px 0px;
+}
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+    background: rgba(0,0,0,0.1);
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:140px;
+}
+
+.carousel-inner{    
+    height:140px;       
+}
+.item active{
+    height:140px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+ .rodape-home{
+    height:30px;       
+
+ }
+ 
+.root-mastter-cabec { width: 100%;
+                      background-color:#252C34;
+  
+ }
+ .container1 { max-width: 100%;margin: 0 auto; }
+ .container2 { max-width: 100%;margin: 0 auto; }
+ .container3 { max-width: 100%;margin: 0 auto; }
+ .container4 { max-width: 100%;margin: 0 auto; height: 200px;}
+ .container4-interno{
+     max-width: 100%;
+     height: 200px;
+ }
+ .col-md-5{
+    margin: 25px 0px 0px 5%;
+    width: 30%;
+    max-height: 100px;
+     float: right;
+}
+.col-md-7{
+    max-width: 70%;
+    margin: 20px 0px 0px 0px;
+    max-height: 150px;
+}
+.texto-col{
+    font-size: 5pt;
+}
+.fone-cabec{
+    font-size: 7pt;
+}
+.baner-titulo{
+    font-size: 12pt;
+}
+
+}
+
+/*Phone Portrait (375px)*/ 
+@media only screen and (min-width: 375px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+ 
+ .lead{
+     margin: 10px 0px 0px 0px;
+     font-size: 7pt;
+ }
+.container{ max-width: 100%;margin: 0 auto; margin-top: -20px;
+        padding: 0px 0px 0px 0px;
+}
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+    background: rgba(0,0,0,0.1);
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:140px;
+}
+
+.carousel-inner{    
+    height:140px;       
+}
+.item active{
+    height:140px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+ .rodape-home{
+    height:30px;       
+
+ }
+ 
+.root-mastter-cabec { width: 100%;
+                      background-color:#252C34;
+  
+ }
+ .container1 { max-width: 100%;margin: 0 auto; }
+ .container2 { max-width: 100%;margin: 0 auto; }
+ .container3 { max-width: 100%;margin: 0 auto; }
+ .container4 { max-width: 100%;margin: 0 auto; height: 200px;}
+ .container4-interno{
+     max-width: 100%;
+     height: 200px;
+ }
+ .col-md-5{
+    margin: 25px 0px 0px 5%;
+    width: 30%;
+    max-height: 100px;
+    float: right;
+  
+}
+.col-md-7{
+    max-width: 70%;
+    margin: 20px 0px 0px 0px;
+    max-height: 150px;
+}
+.texto-col{
+    font-size: 5pt;
+}
+.fone-cabec{
+    font-size: 7pt;
+}
+}
+
+/*Phone Portrait (384px)*/ 
+@media only screen and (min-width: 384px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+ 
+ .lead{
+     margin: 10px 0px 0px 0px;
+     font-size: 7pt;
+ }
+.container{ max-width: 100%;margin: 0 auto; margin-top: -20px;
+        padding: 0px 0px 0px 0px;
+}
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+    background: rgba(0,0,0,0.1);
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:140px;
+}
+
+.carousel-inner{    
+    height:140px;       
+}
+.item active{
+    height:140px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+ .rodape-home{
+    height:30px;       
+
+ }
+ 
+.root-mastter-cabec { width: 100%;
+                      background-color:#252C34;
+  
+ }
+ .container1 { max-width: 100%;margin: 0 auto; }
+ .container2 { max-width: 100%;margin: 0 auto; }
+ .container3 { max-width: 100%;margin: 0 auto; }
+ .container4 { max-width: 100%;margin: 0 auto; height: 200px;}
+ .container4-interno{
+     max-width: 100%;
+     height: 200px;
+ }
+ .col-md-5{
+    margin: 25px 0px 0px 5%;
+    width: 30%;
+    max-height: 100px;
+    float: right;
+  
+}
+.col-md-7{
+    max-width: 70%;
+    margin: 20px 0px 0px 0px;
+    max-height: 150px;
+}
+.texto-col{
+    font-size: 5pt;
+}
+.fone-cabec{
+    font-size: 7pt;
+}
+}
+
+/*Phone Portrait (414px)*/ 
+@media only screen and (min-width: 414px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+ 
+ .lead{
+     margin: 10px 0px 0px 0px;
+     font-size: 7pt;
+ }
+.container{ max-width: 100%;margin: 0 auto; margin-top: -20px;
+        padding: 0px 0px 0px 0px;
+}
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+    background: rgba(0,0,0,0.1);
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:140px;
+}
+
+.carousel-inner{    
+    height:140px;       
+}
+.item active{
+    height:140px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+ .rodape-home{
+    height:30px;       
+
+ }
+ 
+.root-mastter-cabec { width: 100%;
+                      background-color:#252C34;
+  
+ }
+ .container1 { max-width: 100%;margin: 0 auto; }
+ .container2 { max-width: 100%;margin: 0 auto; }
+ .container3 { max-width: 100%;margin: 0 auto; }
+ .container4 { max-width: 100%;margin: 0 auto; height: 200px;}
+ .container4-interno{
+     max-width: 100%;
+     height: 200px;
+ }
+ .col-md-5{
+    margin: 25px 0px 0px 5%;
+    width: 30%;
+    max-height: 100px;
+    float: right;
+  
+}
+.col-md-7{
+    max-width: 70%;
+    margin: 20px 0px 0px 0px;
+    max-height: 150px;
+}
+.texto-col{
+    font-size: 5pt;
+}
+.fone-cabec{
+    font-size: 7pt;
+}
+}
+
+/*Phone Portrait (568px)*/ 
+@media only screen and (min-width: 568px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:600px;
+}
+
+.carousel-inner{    
+    height:600px;       
+}
+.item active{
+    height:600px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+ 
+ .lead{
+     margin: 10px 0px 0px 0px;
+     font-size: 7pt;
+ }
+.container{ max-width: 100%;margin: 0 auto; margin-top: -20px;
+        padding: 0px 0px 0px 0px;
+}
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+    background: rgba(0,0,0,0.1);
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:140px;
+}
+
+.carousel-inner{    
+    height:140px;       
+}
+.item active{
+    height:140px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+ .rodape-home{
+    height:30px;       
+
+ }
+ 
+.root-mastter-cabec { width: 100%;
+                      background-color:#252C34;
+  
+ }
+ .container1 { max-width: 100%;margin: 0 auto; }
+ .container2 { max-width: 100%;margin: 0 auto; }
+ .container3 { max-width: 100%;margin: 0 auto; }
+ .container4 { max-width: 100%;margin: 0 auto; height: 200px;}
+ .container4-interno{
+     max-width: 100%;
+     height: 200px;
+ }
+ .col-md-5{
+    margin: 25px 0px 0px 5%;
+    width: 30%;
+    max-height: 100px;
+    float: right;
+  
+}
+.col-md-7{
+    max-width: 70%;
+    margin: 20px 0px 0px 0px;
+    max-height: 150px;
+}
+.texto-col{
+    font-size: 7pt;
+}
+.fone-cabec{
+    font-size: 7pt;
+}
+}
+
+/*Phone Portrait (600px)*/ 
+@media only screen and (min-width: 600px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:600px;
+}
+
+.carousel-inner{    
+    height:600px;       
+}
+.item active{
+    height:600px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+ 
+ .lead{
+     margin: 10px 0px 0px 0px;
+     font-size: 7pt;
+ }
+.container{ max-width: 100%;margin: 0 auto; margin-top: -20px;
+        padding: 0px 0px 0px 0px;
+}
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+    background: rgba(0,0,0,0.1);
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:240px;
+}
+
+.carousel-inner{    
+    height:240px;       
+}
+.item active{
+    height:240px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+ .rodape-home{
+    height:30px;       
+
+ }
+ 
+.root-mastter-cabec { width: 100%;
+                      background-color:#252C34;
+  
+ }
+ .container1 { max-width: 100%;margin: 0 auto; }
+ .container2 { max-width: 100%;margin: 0 auto; }
+ .container3 { max-width: 100%;margin: 0 auto; }
+ .container4 { max-width: 100%;margin: 0 auto; height: 240px;padding: 40px;}
+ .container4-interno{
+     max-width: 100%;
+     height: 240px;
+ }
+ .col-md-5{
+    margin: 3% 0px 0px 0px;
+    width: 30%;
+    max-height: 150px;
+  
+}
+.col-md-7{
+    max-width: 70%;
+    margin: 0px 0px 0px 0px;
+    max-height: 150px;
+}
+.texto-col{
+    font-size: 8pt;
+}
+.fone-cabec{
+    font-size: 7pt;
+}
+.baner-titulo{
+    font-size: 14pt;
+}
+}
+
+/*Phone Portrait (568px)*/ 
+@media only screen and (min-width: 667px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:600px;
+}
+
+.carousel-inner{    
+    height:600px;       
+}
+.item active{
+    height:600px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+ 
+ .lead{
+     margin: 10px 0px 0px 0px;
+     font-size: 7pt;
+ }
+.container{ max-width: 100%;margin: 0 auto; margin-top: -20px;
+        padding: 0px 0px 0px 0px;
+}
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+    background: rgba(0,0,0,0.1);
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:240px;
+}
+
+.carousel-inner{    
+    height:240px;       
+}
+.item active{
+    height:240px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+ .rodape-home{
+    height:30px;       
+
+ }
+ 
+.root-mastter-cabec { width: 100%;
+                      background-color:#252C34;
+  
+ }
+ .container1 { max-width: 100%;margin: 0 auto; }
+ .container2 { max-width: 100%;margin: 0 auto; }
+ .container3 { max-width: 100%;margin: 0 auto; }
+ .container4 { max-width: 100%;margin: 0 auto; height: 240px;padding: 40px;}
+ .container4-interno{
+     max-width: 100%;
+     height: 240px;
+ }
+ .col-md-5{
+    margin: 3% 0px 0px 0px;
+    width: 30%;
+    max-height: 150px;
+  
+}
+.col-md-7{
+    max-width: 70%;
+    margin: 0px 0px 0px 0px;
+    max-height: 150px;
+}
+.texto-col{
+    font-size: 8pt;
+}
+.fone-cabec{
+    font-size: 7pt;
+}
+.baner-titulo{
+    font-size: 14pt;
+}
+}
+
+@media (min-width: 768px) {
+   Navbar positioning foo 
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+   The navbar becomes detached from the top, so we round the corners 
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+   Bump up size of carousel content 
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+  #myNavbar li a{
+     font-size: 8pt;
+ }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+    
+  }
+ #myNavbar li a{
+     font-size: 8pt;
+ }
+}
+
+/*Phone Portrait (568px)*/ 
+@media only screen and (min-width: 1024px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:600px;
+}
+.baner-titulo{
+     font-size: 40pt;
+}
+
+.carousel-inner{    
+    height:600px;       
+}
+.item active{
+    height:600px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+ 
+ .lead{
+     margin: 10px 0px 0px 0px;
+     font-size: 7pt;
+ }
+.container{ max-width: 100%;margin: 0 auto; margin-top: -20px;
+        padding: 0px 0px 0px 0px;
+}
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+    background: rgba(0,0,0,0.1);
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:400px;
+}
+
+.carousel-inner{    
+    height:400px;       
+}
+.item active{
+    height:400px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+/* .rodape-home{
+    max-height: 400px;
+
+ }*/
+ 
+.root-mastter-cabec { width: 100%;
+                      background-color:#252C34;
+  
+ }
+ .container1 { max-width: 100%;margin: 0 auto; }
+ .container2 { max-width: 100%;margin: 0 auto; }
+ .container3 { max-width: 100%;margin: 0 auto; }
+ .container4 { max-width: 100%;margin: 0 auto; 
+              height: 400px;padding: 40px;
+ }
+ .container4-interno{
+     max-width: 100%;
+     height: 400px;
+ }
+ .col-md-5{
+    margin: 0px 0px 0px 0px;
+    width: 30%;
+    max-height: 300px;
+}
+.col-md-7{
+    max-width: 65%;
+    margin: 0px 0px 0px 0px;
+    max-height: 400px;
+}
+.texto-col{
+    font-size: 16pt;
+}
+.fone-cabec{
+     font-size: 14pt;
+ }
+ .texto-topo{
+     font-size: 10pt;
+ }
+}

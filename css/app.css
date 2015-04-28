@@ -1,0 +1,99 @@
+.photos{cursor:pointer;}
+
+/* Glisse: Overlay */
+#glisse-overlay {
+  background: rgba(0,0,0.3);}
+
+#glisse-close {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  position: fixed;
+  top:40px;
+  right:40px;
+  /*.glyphicon-user:before{content:"\e008"}*/
+  background: url("../img/close.gif");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+}
+
+#glisse-close:hover {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  position: fixed;
+  top:40px;
+  right:40px;
+  background: url("../img/close.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+}
+
+
+/* Prev/Next button */
+.glisse-next a, .glisse-prev a {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  background:transparent;
+}
+.glisse-next a {
+  left: 50%;
+  margin-left: 20px; 
+  background: url("../img/tp_home_slide_bot_dir_nor.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+}
+
+.glisse-prev a {
+  left: 50%;
+  margin-left: -40px; 
+  background: url("../img/tp_home_slide_bot_esq_nor.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+}
+
+.glisse-next a:hover {
+  left: 50%;
+  margin-left: 20px; 
+  background: url("../img/tp_home_slide_dir_sel.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+}
+
+.glisse-prev a:hover {
+  left: 50%;
+  margin-left: -40px; 
+  background: url("../img/tp_home_slide_esq_sel.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+}
+
+
+/* Legend */
+.glisse-legend {
+  position:fixed;
+  display:block;
+  bottom:10px;
+  left:10px;
+  color:white;
+  background:blue; }
+
+.album-slayde{
+   list-style: none;    
+}
+

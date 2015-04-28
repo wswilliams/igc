@@ -1,0 +1,748 @@
+*{
+    margin:0px;
+    padding:0px
+}
+/*
+a,h1,h2,h3,#root,#link{
+    font-size: 100%;
+}
+*/
+
+a{
+text-decoration: none;
+font-weight: bold;
+color:#000000;
+outline:none;
+}
+a:hover{
+color:#A52A2A;
+}
+
+html{
+    width:100%;
+    height:100%;
+    
+}
+body{
+    padding-bottom: 40px;
+    color: #5a5a5a;
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    /*position:relative;*/
+/*background:#E6E8FA;*/
+    font-family:Calibri;
+    font-weight: bold;
+    overflow-y:scroll;
+     font-size: 1em;
+}
+div,img{outline:none;}
+
+.box { float: left; }
+.root-mastter { max-width: 100%; margin: 0 auto; 
+	background: url("../img/tapa_exportados_web/tp_galeria/EXPORTADOS/tapa_gal_CORPO/tp_fundo_conteudo.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%; 
+    /*position: absolute;*/
+        
+}
+.container1{ max-width: 70%;margin: 0 auto; 
+             background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_fundo-28_interno.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+/*    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;        */
+}
+.container2{ max-width: 70%;margin: 0 auto; margin-top: -20px;
+             background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_CORPO/tp_banner_fundo_conteudo-30-30.png");
+             background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+         box-shadow: 5px 0px 10px #ccc, -5px -0px 10px #ccc;
+        -moz-box-shadow: 5px 0px 10px #ccc, -5px -0px 10px #ccc;
+        -webkit-box-shadow: 5px 0px 10px #ccc, -5px -0px 10px #ccc;
+        -khtml-box-shadow: 5px 0px 10px #ccc, -5px -0px 10px #ccc;
+text-align: center;
+
+}
+.container3{ max-width: 70%;margin: 0 auto; 
+background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_fundo-28_interno.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+
+}
+.container{ max-width: 70%;margin: 0 auto; 
+        padding: 10px 15px 0px 0px;
+        background-color: #ffffff;
+        box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #ccc;
+        -moz-box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #ccc;
+        -webkit-box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #ccc;
+        -khtml-box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #ccc;
+}
+
+#cadastrar-contatos{
+color: #000000;    
+}
+.root-mastter-cabec { width: 100%;
+ background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_fundo-28_interno.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          /*height: 20%;*/
+          /*background-color: #000000;*/
+ }
+ .root-mastter-cabec_interno{
+    max-width: 70%;margin: 0 auto; 
+    padding: 10px 15px 0px 0px;
+}
+
+
+.container-baner { width: 100%;
+	  height:10em;
+
+ }
+
+.sf-menu {
+   z-index:99999999;
+}
+
+ #nave{
+     background:transparent!important;
+        border-left: transparent;
+        border-right: transparent;
+        border-top:  transparent;
+        border-bottom: transparent;
+        
+ }
+ #nave a{outline:none;}
+ 
+ #logo{
+     width: 11em;
+     background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_serv_menu_logo-04.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 70% 70%;
+          -webkit-background-size: 70% 70%;
+          background-size: 70% 70%;
+ }
+ .container-fluid{
+/*     background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_fundo-28_interno.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;*/
+          
+ }
+ #myNavbar li a{
+     color: #ffffff;
+     font-size: 10pt;
+ }
+ #myNavbar li a:hover{
+     color: #563d7c;
+ }
+ .estilotextarea{
+     width:400px;
+     height:100px;
+     border: 2px solid #cccccc;
+ }
+/*
+entre aqui
+ */
+ 
+/*.container{
+    background-color: #FFFFFF;
+}*/
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.col-lg-3{
+  border-bottom: 1px solid #cccccc;  
+  /*border-right: 1px solid #cccccc;*/
+  padding: 20px;
+}
+.col-lg-3-interno{
+    width: 90%;
+    border-top: 1px solid #cccccc;  
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+#img-redond{
+    //border-radius: 1em;
+/*    border-left: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+        box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #ccc;
+        -moz-box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #ccc;
+        -webkit-box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #ccc;
+        -khtml-box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #ccc;*/
+        width: 100%;
+        height: 44em;
+}
+#img-redond:hover{
+    border-left: 3px solid #cccccc;
+        border-right: 3px solid #cccccc;
+        border-top: 3px solid #cccccc;
+        border-bottom: 3px solid #cccccc;
+}
+#font-text{
+    text-decoration: none;
+    color: #5a5a5a;
+    text-shadow: #000 2px 3px 2px;
+}
+#font-text:hover{
+    color: #104E8B;
+    
+}
+
+.row{
+    margin: 10px 0px 0px 0px;   
+    text-align: center;
+    width: 102%;
+/*        border-left: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;*/
+}
+.logo-galeria{
+    padding: 40px;
+/*            border-left: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;*/
+}
+.col-md-7{
+    
+       padding: 10px;
+        color: #000000;
+        background-color: #eee;
+        font-size: 14pt;
+}
+.col-md-5{
+/*    height: 45em;
+           border-left: 1px solid #000000;
+        border-right: 1px solid #000000;
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;*/
+    
+}
+.col-sm-6{
+        /*padding: 20px 0px 0px 0px;*/
+        border-bottom: 1px solid #cccccc;
+}
+
+.rodape-home{
+    background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_fundo-28_interno.png");
+background-repeat: no-repeat;
+          -moz-background-size: 100% 10%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+}
+.pull-left{
+     background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_serv_menu_logo-04.png");
+background-repeat: no-repeat;
+          -moz-background-size: 100% 10%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          height: 3em;
+          width: 15%;
+}
+.pull-right{
+     background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_serv_menu_logo-04.png");
+background-repeat: no-repeat;
+          -moz-background-size: 100% 10%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          height: 3em;
+          width: 15%;
+}
+
+#row-featurette{
+    padding: 20px;
+/*    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;*/
+/*    margin: 20px 0px 0px 0px;
+    
+/*background-color: #cccccc;*/
+}
+#active-titulo{
+    background-color: #F39814;
+    color: #ffffff;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+}
+.list-group-item{
+    background-color: #eee;
+    color: #000000;
+    font-size: 14pt;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+   #myNavbar li a{
+     font-size: 8pt;
+ }
+ .list-group-item{
+    font-size: 8pt;
+}
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+    
+  }
+  .list-group-item{
+    font-size: 10pt;
+}
+}
+/*Phone Landscape (480px) voce aqui*/ 
+@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+    }
+    
+.col-md-7{
+      width: 100%;
+      height: 450px;
+      padding: 0px 0px 0px 0px;
+}
+.col-md-5{
+      width: 100%;
+}
+.container{ max-width: 100%;margin: 0 auto; 
+        padding: 0px 0px 0px 0px;
+}
+.list-group a{
+    font-size: 6pt;
+}
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+	background: url("../img/tp_fundo_conteudo.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%; 
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:140px;
+}
+
+.carousel-inner{    
+    height:140px;       
+}
+.item active{
+    height:140px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+.rodape-home{
+    height:30px;       
+
+ }
+ .container-baner { width: 100%;
+                    height:8em;
+                    position: relative;
+ }                            
+.container1 { max-width: 100%;margin: 0 auto; }
+.container2 { max-width: 100%;margin: 0 auto; margin-top: -20px;}
+.container3 { max-width: 100%;margin: 0 auto; }
+.root-mastter-cabec { width: 100%;
+ background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_fundo-28_interno.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          /*background-color: #000000;*/
+ }
+
+.logo-galeria{
+    padding: 15px;
+
+}
+.estilotextarea{
+ width: 200px;   
+}
+
+.list-group-item{
+    font-size: 6pt;
+}
+}
+
+
+/*Phone Portrait (320px)*/ 
+@media only screen and (max-width: 320px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+
+
+.col-md-7{
+      width: 100%;
+      height: 470px;
+      padding: 0px 0px 0px 0px;
+}
+
+.list-group a{
+    font-size: 6pt;
+}
+.container{ max-width: 100%;margin: 0 auto; 
+        padding: 0px 0px 0px 0px;
+}
+/*#formGroupInputSmall{
+    height: 20px;
+}*/
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+	background: url("../img/tp_fundo_conteudo.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%; 
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:140px;
+/*       border-left: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;*/
+}
+
+.carousel-inner{    
+    height:140px;       
+}
+.item active{
+    height:140px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+    .rodape-home{
+    height:30px;       
+
+ }
+ 
+ .container-baner { width: 100%;
+                    height:8em;
+                    position: relative;
+ }                            
+ .root-mastter-cabec { width: 100%;
+ background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_fundo-28_interno.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          /*background-color: #000000;*/
+ }
+.container1 { max-width: 100%;margin: 0 auto; }
+.container2 { max-width: 100%;margin: 0 auto; margin-top: -20px;}
+.container3 { max-width: 100%;margin: 0 auto; }
+.logo-galeria{
+    padding: 15px;
+
+}
+.estilotextarea{
+ width: 200px;   
+}
+.list-group-item{
+    font-size: 6pt;
+}
+}
+
+/*Phone Portrait (384px)*/ 
+@media only screen and (max-width: 384px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+
+
+.col-md-7{
+      width: 100%;
+      height: 470px;
+      padding: 0px 0px 0px 0px;
+}
+
+.list-group a{
+    font-size: 6pt;
+}
+.container{ max-width: 100%;margin: 0 auto; 
+        padding: 0px 0px 0px 0px;
+}
+/*#formGroupInputSmall{
+    height: 20px;
+}*/
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+	background: url("../img/tp_fundo_conteudo.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%; 
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:140px;
+/*       border-left: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;*/
+}
+
+.carousel-inner{    
+    height:140px;       
+}
+.item active{
+    height:140px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+    .rodape-home{
+    height:30px;       
+
+ }
+ 
+ .container-baner { width: 100%;
+                    height:8em;
+                    position: relative;
+ }                            
+ .root-mastter-cabec { width: 100%;
+ background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_fundo-28_interno.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          /*background-color: #000000;*/
+ }
+.container1 { max-width: 100%;margin: 0 auto; }
+.container2 { max-width: 100%;margin: 0 auto; margin-top: -20px;}
+.container3 { max-width: 100%;margin: 0 auto; }
+.logo-galeria{
+    padding: 15px;
+
+}
+.estilotextarea{
+ width: 200px;   
+}
+.list-group-item{
+    font-size: 6pt;
+}
+}
+
+/*Phone Portrait (568px)*/ 
+@media only screen and (max-width: 568px) {
+    #myNavbar li a{
+     color: #ffffff;
+     font-size: 12pt;
+ }
+
+
+.col-md-7{
+      width: 100%;
+      height: 470px;
+      padding: 0px 0px 0px 0px;
+}
+
+.list-group a{
+    font-size: 6pt;
+}
+.container{ max-width: 100%;margin: 0 auto; 
+        padding: 0px 0px 0px 0px;
+}
+/*#formGroupInputSmall{
+    height: 20px;
+}*/
+
+.root-mastter{
+    max-width: 100%; margin: 0 auto; 
+	background: url("../img/tp_fundo_conteudo.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%; 
+ }
+ 
+ .carousel{
+    margin: 0px 0px 0px 0px;
+    height:140px;
+/*       border-left: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;*/
+}
+
+.carousel-inner{    
+    height:140px;       
+}
+.item active{
+    height:140px;
+}
+.carousel-inner, img{
+    height:100%;       
+}
+
+    .rodape-home{
+    height:30px;       
+
+ }
+ 
+ .container-baner { width: 100%;
+                    height:8em;
+                    position: relative;
+ }                            
+ .root-mastter-cabec { width: 100%;
+ background: url("../img/tapa_exportados_web/tp_contatos/EXPORTADOS/tapa_nov_TOPO/tp_fundo-28_interno.png");
+          background-repeat: no-repeat;
+          -moz-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+          /*background-color: #000000;*/
+ }
+.container1 { max-width: 100%;margin: 0 auto; }
+.container2 { max-width: 100%;margin: 0 auto; margin-top: -20px;}
+.container3 { max-width: 100%;margin: 0 auto; }
+.logo-galeria{
+    padding: 15px;
+
+}
+.estilotextarea{
+ width: 200px;   
+}
+.list-group-item{
+    font-size: 6pt;
+}
+}
+/*Phone Portrait (600px)*/ 
+@media only screen and (max-width: 600px) {
+.estilotextarea{
+ width: 200px;   
+}    
+}
+
+ /*iPad 3 & 4 Landscape*/ 
+@media only screen and (width: 1024px){
+.estilotextarea{
+ width: 200px;   
+}    
+}
+/*Phone Portrait (778px)*/ 
+@media only screen and (max-width: 768px) {
+    #myNavbar li a{
+     font-size: 6pt;
+ }
+}
