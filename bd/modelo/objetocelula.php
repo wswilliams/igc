@@ -37,7 +37,7 @@
                 return $this->estilo;
                 }
 
-                function setId($estilo) {
+                function setEstilo($estilo) {
                    $this->estilo = $estilo;
                 }
                 
@@ -117,7 +117,7 @@
 		function valida1($id,$nome, $lider,$rua,$casa,$bairro,$dia,$estilo,$status){
 
 			$this->nome=$nome; $this->lider=$lider; $this->rua=$rua; $this->casa=$casa; $this->bairro=$bairro;
-			$this->dia=$dia;estilo=$estilo; $this->status=$status;$this->id=$id;
+			$this->dia=$dia;$this->estilo=$estilo; $this->status=$status;$this->id=$id;
 		}
                 
                public function __toString(){

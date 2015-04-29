@@ -29,7 +29,7 @@ if (isset($_COOKIE["nome"])) {
         $ok="<div class='alert alert-success' role='alert'>
                    Parabens, cadastro realizado com sucesso
                    </div>";
-        }else if($ret == 1){{
+        }else if($ret == 1){
             $ok="<div class='alert alert-danger' role='alert'>
                 <span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>
                 <span class='sr-only'>Error:</span>
@@ -37,17 +37,12 @@ if (isset($_COOKIE["nome"])) {
               </div>";
         }
         
-    } else {
-        $ok="<div class='alert alert-danger' role='alert'>
-        <span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>
-        <span class='sr-only'>Error:</span>
-         Usuario nao esta logado
-      </div>";
-    }
-    echo $ok;  
+    
   }else{
          header("Location: ../index.php?");
    }
+   
+   echo $ok;
   
 }
 

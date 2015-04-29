@@ -8,6 +8,7 @@ function addMembroNaCelula() {
         $id = $_POST["id"];
         $lider=$_POST["lider"];
         $nomeCelula=$_POST["nome"];
+        $estiloCelula=$_POST["estilo"];
         
         require_once ("control/controle.php");
         $obj = controle::getInstance();
@@ -118,15 +119,15 @@ function addMembroNaCelula() {
            <div class="col-sm-6 col-md-6">
                    <div class="caption">
                        <h5>ADD Participantes na Celula do Sexo</h5> 
-			<form  id="buscarMembros" action = "" method = "post">
+<!--			<form  id="buscarMembros" action = "" method = "post">
 				<select id='listBuscar' name='sexo' >
 				<option value = "F">Feminino</option>
 				<option value = "M">Masculino</option>
 				</select>
-			</form>
+			</form>-->
                     </div>
                   <?php
-                               $lista1 = $obj->listadeTodosMembroControle() ;
+                               $lista1 = $obj->listadeMembroPorSexoControle($estiloCelula) ;
                                $chave1 = array_keys($lista1);
                       ?>
                       <form  id="addMembro" action = "" method = "post">

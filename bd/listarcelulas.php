@@ -19,7 +19,6 @@ if(isset($_COOKIE["nome"])){
         
         $ok.="<div class='panel panel-default'>
                 <div class='panel-heading'>Ha ".$tamLista." Celulas Cadastrada no Sistema</div>
-                  <form action = 'addMembronaCelula.php' method = 'post' >
                   <table class='table'>
                     <tr>
                       <td>
@@ -30,18 +29,18 @@ if(isset($_COOKIE["nome"])){
 
             $ok .="<tr>
                         <td>
-                           " . $lista2[$indice2]->getNome().
-                    "<input type='hidden' name='id' value=" . $lista2[$indice2]->getId(). ">
-                     <input type='hidden' name='lider' value=" . $lista2[$indice2]->getLider(). ">
-                     <input type='hidden' name='nome' value='" . $lista2[$indice2]->getNome()."'>
+                           " . $lista2[$indice2]->getNome()."
                         </td>
-                        <td>
+                        <td><form action = 'addMembronaCelula.php' method = 'post' >
+                            <input type='hidden' name='id' value=" . $lista2[$indice2]->getId(). ">
+                            <input type='hidden' name='lider' value=" . $lista2[$indice2]->getLider(). ">
+                            <input type='hidden' name='nome' value='" . $lista2[$indice2]->getNome()."'>
+                            <input type='hidden' name='estilo' value=" . $lista2[$indice2]->getEstilo().">
                             <input type='image' src='ICON/b_view.png' width='20' height='20' border='0' title = 'Adicionar Membros a Celula'>
-                        </td>
+                        </form></td>
                       </tr>";
         }
        $ok .= "</table>
-                 </form>
                  </div>";
         
    }else {

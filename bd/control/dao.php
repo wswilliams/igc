@@ -589,7 +589,7 @@ class dao {
       
       $objDao = Connection::getInstance();
       
-      $resultado = mysql_query("Select Codigo,CodLider,NomeCelula from celulas") or die ("Nao foi possivel realizar a busca".mysql_error());
+      $resultado = mysql_query("Select Codigo,CodLider,NomeCelula,Estilo from celulas") or die ("Nao foi possivel realizar a busca".mysql_error());
       $listaCelula = array();
       
       $i=0;
@@ -601,6 +601,7 @@ class dao {
             $celula->setId($registro['Codigo']);
             $celula->setLider($registro['CodLider']);
             $celula->setNome($registro['NomeCelula']);
+            $celula->setEstilo($registro['Estilo']);
                         
 	    $listaCelula[$i] = $celula;
             
@@ -839,11 +840,11 @@ class dao {
       */
      function listaTodasMembroPorsexoDao($sexo){
       require_once ("conexao.php");
-       require_once ("../modelo/objetoMembro.php");
+       require_once ("modelo/objetoMembro.php");
       
       $objDao = Connection::getInstance();
       
-      $resultado = mysql_query("Select Matricula,Nome from membros where LiderCelula = '$sexo' order by Nome") or die ("Nao foi possivel realizar a busca".mysql_error());
+      $resultado = mysql_query("Select Matricula,Nome from membros where Sexo = '$sexo' order by Nome") or die ("Nao foi possivel realizar a busca".mysql_error());
       
       $listaMembro = array();
       
