@@ -208,8 +208,9 @@ class dao {
              $bairro=$ace->getBairro();
              $dia=$ace->getDia();
              $status=$ace->getStatus();
+	     $estilo=$ace->getStatus();
             	
-		$inse = "INSERT INTO celulas (Codigo,CodLider,NomeCelula,Rua,Casa,Bairro,DiadaCelula,Status)VALUES('','$lider','$nome','$rua','$casa','$bairro','$dia','$status')";
+		$inse = "INSERT INTO celulas (Codigo,CodLider,NomeCelula,Rua,Casa,Bairro,DiadaCelula,Estilo,Status)VALUES('','$lider','$nome','$rua','$casa','$bairro','$dia','$estilo','$status')";
 
             $result = mysql_query($inse) or die ("Falha na insercao da celula".mysql_error());
 
@@ -544,43 +545,6 @@ class dao {
      }
      /*fim
       */
-
-
-/*metodo para pesquisar membro e retornar um lista
-      */
-     function listadeTodosLiderCelulaDao(){
-      require_once ("conexao.php");
-      require_once ("modelo/objetoMembro.php");
-      
-      $objDao = Connection::getInstance();
-      
-      $resultado = mysql_query("Select Matricula,Nome from membros order by Nome") or die ("Nao foi possivel realizar a busca".mysql_error());
-      $listaMembro = array();
-      
-      $i=0;
-      
-          
-      while ($registro = mysql_fetch_assoc($resultado)){
-              
-          if($registro["Nome"] != ""){
-              
-	    $membro = new objetoMembro();
-                             
-            $membro->setMatricula($registro['Matricula']);
-            $membro->setNome($registro['Nome']);
-                        
-	    $listaMembro[$i] = $membro;
-            
-	}
-        $i++;
-      }
-		return $listaMembro;
-		mysql_free_result($resultado);
-                $objDao->freebanco();
-      
-     }
-     /*fim
-      */
      
      /*metodo para pesquisar todos os membro com status ativo
       */
@@ -846,6 +810,41 @@ class dao {
       $objDao = Connection::getInstance();
       
       $resultado = mysql_query("Select Matricula,Nome from membros where LiderCelula = 'S' order by Nome") or die ("Nao foi possivel realizar a busca".mysql_error());
+      $listaMembro = array();
+      
+      $i=0;
+      
+          
+      while ($registro = mysql_fetch_assoc($resultado)){
+              
+          if($registro["Nome"] != ""){
+              
+	    $membro = new objetoMembro();
+                             
+            $membro->setMatricula($registro['Matricula']);
+            $membro->setNome($registro['Nome']);
+                        
+	    $listaMembro[$i] = $membro;
+	}
+        $i++;
+      }
+		return $listaMembro;
+		mysql_free_result($resultado);
+                $objDao->freebanco();
+     }
+     /*fim
+      */
+
+ /*metodo para pesquisar todos as celulas
+      */
+     function listaTodasMembroPorsexoDao($sexo){
+      require_once ("conexao.php");
+       require_once ("../modelo/objetoMembro.php");
+      
+      $objDao = Connection::getInstance();
+      
+      $resultado = mysql_query("Select Matricula,Nome from membros where LiderCelula = '$sexo' order by Nome") or die ("Nao foi possivel realizar a busca".mysql_error());
+      
       $listaMembro = array();
       
       $i=0;

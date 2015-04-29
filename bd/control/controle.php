@@ -206,7 +206,7 @@ class controle {
       $objDao = dao::getInstance();
       $listaCliente = array();
       
-      return $listaCliente =$objDao->listadeTodosLiderCelulaDao();
+      return $listaCliente =$objDao->listadeTodosMembroDao();
       
      }
      /*fim
@@ -280,6 +280,21 @@ class controle {
       $lista = array();
       
       return $lista =$objDao->listadeMembroPorNome($nome);
+     }
+     /*fim
+      */
+
+
+      /*metodo para pesquisar todos os membros com o nome passado
+
+       * 
+       */
+ function listadeMembroPorSexoControle($sexo){
+      require_once ("control/dao.php");
+      $objDao = dao::getInstance();
+      $lista = array();
+      
+      return $lista =$objDao->listaTodasMembroPorsexoDao($sexo);
      }
      /*fim
       */

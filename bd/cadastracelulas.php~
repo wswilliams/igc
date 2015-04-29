@@ -20,7 +20,7 @@ if (isset($_COOKIE["nome"])) {
         $status="ATIVA";
         
         $celula =new objetocelula();
-        $celula->valida($nome, $lider, $rua, $casa, $bairro, $dia,$estilo, $status);
+        $celula->valida($nome, $lider, $rua, $casa, $bairro, $dia, $status);
         
         $ret = $control->cadadastrarCelulaControle($celula);
         
