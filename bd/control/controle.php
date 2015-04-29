@@ -113,11 +113,11 @@ class controle {
 
      /*metodo para pesquisar um membro e removelo da celula
       */
-     function excluirMembrodaCelulaControle($nome,$matricula){
+     function excluirMembrodaCelulaControle($codCelula,$matricula){
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      return $objeto =$objDao->excluirMembrodaCelulaDao($nome,$matricula);
+      return $objeto =$objDao->excluirMembrodaCelulaDao($codCelula,$matricula);
       
      }
      /*fim

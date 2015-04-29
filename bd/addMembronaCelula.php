@@ -39,6 +39,7 @@ function addMembroNaCelula() {
                 <script type="text/javascript" src="js/suavizar-carregamento-pagina.js"></script>
                 <script type="text/javascript" src="js/dataHora.js"></script>
                 <script type="text/javascript" src="js/addMembrasiaNaCelula.js"></script>
+                <script type="text/javascript" src="js/removeMembroCelula.js"></script>
                 
                 <title>Pagina Inicial</title>
                 

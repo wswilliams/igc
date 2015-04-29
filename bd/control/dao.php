@@ -337,29 +337,24 @@ class dao {
      /*metodo para cadastrar uma celula que recebe como parametro um objeto celula
       * e retorna um inteiro
       */
-     public function excluirMembrodaCelulaDao($nome,$matricula){
+     public function excluirMembrodaCelulaDao($codCelula,$matricula){
       
         require_once ("conexao.php");
     
         $obj = Connection::getInstance();
         $ret=3;
-        
-        $busca = mysql_query("Select Matricula from membros where Nome = '$nome'") or die ("Nao foi possivel realizar a busca".mysql_error());
-         $reg = mysql_fetch_assoc($busca);
-         $mat = $reg["Matricula"];
              
-         $delet = "DELETE FROM celulamembro WHERE CodCelula = '$matricula' AND CodMembro = '$mat'";
+         $delet = "DELETE FROM celulamembro WHERE CodCelula = '$codCelula' AND CodMembro = '$matricula'";
          $resul = mysql_query($delet)or die ("Nao foi possivel excluir membro".mysql_error());
         
         if($resul){   
-            $ret = $matricula;
+            $ret = 1;
         }
         else{
              
-            $ret = 1;
+            $ret = 2;
         }
         
-        mysql_free_result($busca);
         $obj->freebanco();
       
       return $ret;

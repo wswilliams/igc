@@ -19,21 +19,25 @@ jQuery(document).ready(function(){
 //function lisparCamposCelula(){
 		jQuery('#excluir').submit(function(){
 			var dados = jQuery( this ).serialize();
-
-			jQuery.ajax({
-				type: "POST",
-				url: "exclui_membro_celula.php",
-				data: dados,
-				success: function(data)
-				{
-                                        var valores= data.split(";");
-                                        var indice = document.getElementById("listEx").length;
-                                        document.getElementById("listEx").options[indice] = new Option(valores[0],valores[1]);
-                                    
-				}
-			});
-			
-			return false;
+                        var x = document.getElementById("listEx");
+                        x.remove(x.selectedIndex);
+                        
+//                        document.createElement("option");
+                        
+//			jQuery.ajax({
+//				type: "POST",
+//				url: "exclui_membro_celula.php",
+//				data: dados,
+//				success: function(data)
+//				{
+//                                        var valores= data.split(";");
+//                                        var indice = document.getElementById("listAdd").length;
+//                                        document.getElementById("listAdd").options[indice] = new Option(valores[0],valores[1]);
+//                                    
+//				}
+//			});
+//			
+//			return false;
 		});
 	});
 
