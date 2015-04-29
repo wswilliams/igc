@@ -206,7 +206,7 @@ class controle {
       $objDao = dao::getInstance();
       $listaCliente = array();
       
-      return $listaCliente =$objDao->listadeTodosLiderCelulaDao();
+      return $listaCliente =$objDao->listadeTodosMembroDao();
       
      }
      /*fim

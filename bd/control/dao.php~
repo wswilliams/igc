@@ -554,7 +554,7 @@ class dao {
       
       $objDao = Connection::getInstance();
       
-      $resultado = mysql_query("Select Matricula,Nome from membros where LiderCelula = 'S' order by Nome") or die ("Nao foi possivel realizar a busca".mysql_error());
+      $resultado = mysql_query("Select Matricula,Nome from membros order by Nome") or die ("Nao foi possivel realizar a busca".mysql_error());
       $listaMembro = array();
       
       $i=0;
