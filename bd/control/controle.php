@@ -115,9 +115,11 @@ class controle {
       */
      function excluirMembrodaCelulaControle($codCelula,$matricula){
       require_once ("control/dao.php");
-      
+      require_once ("modelo/objetoMembro.php");
       $objDao = dao::getInstance();
-      return $objeto =$objDao->excluirMembrodaCelulaDao($codCelula,$matricula);
+      $objMembro = new objetoMembro();
+      
+      return $objMembro =$objDao->excluirMembrodaCelulaDao($codCelula,$matricula);
       
      }
      /*fim

@@ -4,19 +4,21 @@ function excluiMembroCelula(){
 $ret=0;
   if($_COOKIE["nome"]){
 
-    if(isset($_POST["lis"]) && isset($_POST["codcelulaExcluir"])){
-     $matricula = $_POST["lis"];
+    if(isset($_POST["list1"]) && isset($_POST["codcelulaExcluir"])){
+     $matricula = $_POST["list1"];
      $codCelula = $_POST["codcelulaExcluir"];
-     $nomeMembro=$_POST["nomeMembro"];
 
      require_once ("control/controle.php");
+     require_once ("modelo/objetoMembro.php");
+     $objMembro = new objetoMembro();
      
       $obj = controle::getInstance();
 
-      $ret = $obj->excluirMembrodaCelulaControle($codCelula,$matricula);
+      $objMembro = $obj->excluirMembrodaCelulaControle($codCelula,$matricula);
       
-        if($ret == 1){
-          $ret=$nomeMembro.";".$matricula;
+        if($objMembro->getMatricula() > 0){
+          $ret=$objMembro->getNome().";".$objMembro->getMatricula();
+//            $ret=$matricula.";".$codCelula;
           }
           
      }

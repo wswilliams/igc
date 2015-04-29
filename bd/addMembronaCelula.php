@@ -99,7 +99,7 @@ function addMembroNaCelula() {
                               <h5>Participantes da Celula</h5>
                             </div>
                             <form id="excluir" action ="" method = "post"> 
-                                <select id="listEx" size="10" name="list" >
+                                <select id="listEx" size="10" name="list1" >
                               <?php
                                 for ($index = 0; $index < sizeof($chave); $index++) {
                                     $indice = $chave[$index];

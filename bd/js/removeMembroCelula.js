@@ -22,22 +22,20 @@ jQuery(document).ready(function(){
                         var x = document.getElementById("listEx");
                         x.remove(x.selectedIndex);
                         
-//                        document.createElement("option");
-                        
-//			jQuery.ajax({
-//				type: "POST",
-//				url: "exclui_membro_celula.php",
-//				data: dados,
-//				success: function(data)
-//				{
-//                                        var valores= data.split(";");
-//                                        var indice = document.getElementById("listAdd").length;
-//                                        document.getElementById("listAdd").options[indice] = new Option(valores[0],valores[1]);
-//                                    
-//				}
-//			});
-//			
-//			return false;
+			jQuery.ajax({
+				type: "POST",
+				url: "exclui_membro_celula.php",
+				data: dados,
+				success: function(data)
+				{
+                                        var valores= data.split(";");
+                                        var indice = document.getElementById("listAdd").length;
+                                        document.getElementById("listAdd").options[indice] = new Option(valores[0],valores[1]);
+                                    
+				}
+			});
+			
+			return false;
 		});
 	});
 

@@ -340,24 +340,30 @@ class dao {
      public function excluirMembrodaCelulaDao($codCelula,$matricula){
       
         require_once ("conexao.php");
+        require_once ("modelo/objetoMembro.php");
     
         $obj = Connection::getInstance();
+        $objMembro = new objetoMembro();
         $ret=3;
-             
-         $delet = "DELETE FROM celulamembro WHERE CodCelula = '$codCelula' AND CodMembro = '$matricula'";
-         $resul = mysql_query($delet)or die ("Nao foi possivel excluir membro".mysql_error());
+           
+         $string= "Select Matricula,Nome from membros WHERE Matricula = '$matricula'";
+         $resul1 = mysql_query($string)or die ("Nao foi possivel encontrar o membro".mysql_error());
+         
+         if($resul1){   
+            $reg = mysql_fetch_assoc($resul1);
+            $objMembro->setMatricula($reg["Matricula"]);
+            $objMembro->setNome($reg["Nome"]);
+        }
+//         $string="DELETE FROM `geracaopar1_1`.`celulamembro` WHERE `celulamembro`.`CodCelula` = 5 AND `celulamembro`.`CodMembro` = 7";
+         $resul = mysql_query("DELETE FROM celulamembro WHERE CodCelula = '$codCelula' AND CodMembro = '$matricula'")or die ("Nao foi possivel excluir membro".mysql_error());
         
         if($resul){   
-            $ret = 1;
+            
+            $ret=1;
         }
-        else{
-             
-            $ret = 2;
-        }
-        
+        mysql_free_result($resul1);
         $obj->freebanco();
-      
-      return $ret;
+      return $objMembro;
      }
      /*fim
       */
