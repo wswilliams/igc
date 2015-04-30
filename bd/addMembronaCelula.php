@@ -118,7 +118,7 @@ function addMembroNaCelula() {
                 
            <div class="col-sm-6 col-md-6">
                    <div class="caption">
-                       <h5>ADD Participantes na Celula do Sexo</h5> 
+                       <h5>ADD Participantes na Celula</h5> 
 <!--			<form  id="buscarMembros" action = "" method = "post">
 				<select id='listBuscar' name='sexo' >
 				<option value = "F">Feminino</option>
