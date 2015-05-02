@@ -78,7 +78,7 @@ function principal() {
                 </form>
             </div>
             <div class="col-xs-6 col-md-3" id="thumb">
-                <form id="relatorio" action="" method="POST">
+                <form id="relatorio" action="gerar_relatorio_de_celulas.php" method="POST" target="_blanck">
                     <input type="hidden" name="rel"/>
                     <input type="image" src="ICON/internet-37197_150.png"  width="40" height="30" border="0" title = "Gerar Relatorio" />
                     <br><br><h6>Gerar Relat&oacute;rio das Celulas</h6>

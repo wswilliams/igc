@@ -870,4 +870,46 @@ class dao {
      }
      /*fim
       */
+     
+      /*metodo para pesquisar membros na celula e retornar um lista
+      */
+     function relatorioDeCelulaDao(){
+      require_once ("conexao.php");
+      require_once ("modelo/objetocelula.php");
+      
+      $objDao = Connection::getInstance();      
+      $resultado = mysql_query("Select c.Codigo,NomeCelula,c.Rua,c.Casa,c.Bairro,c.DiadaCelula,c.Status,m.Nome from celulas c join membros m on m.Matricula = c.codLider") or die ("Nao foi possivel realizar a busca".mysql_error());
+      $listaCelula = array();
+      
+      $listaCelula1 = array();
+      $i=0;
+      
+    if($resultado){
+          
+      while ($registro = mysql_fetch_assoc($resultado)){              
+	    $celula = new objetocelula();
+            $celula->setId($registro['Codigo']);
+            $celula->setNome($registro['NomeCelula']); $celula->setRua($registro['Rua']);
+            $celula->setCasa($registro['Casa']); $celula->setBairro($registro['Bairro']);
+            $celula->setDia($registro['DiadaCelula']); $celula->setStatus($registro['Status']);
+            $celula->setNomeMembro($registro['Nome']);
+            
+            $resultado1 = mysql_query("Select m.Nome from celulas c join celulamembro e on e.CodCelula = c.Codigo join membros m on e.CodMembro = m.Matricula where e.CodCelula = ".$celula->getId()) or die ("Nao foi possivel realizar a busca".mysql_error());
+            $j=0;
+            while ($registro1 = mysql_fetch_assoc($resultado1)){
+                    $listaCelula1[$j]=$registro['Nome'];
+                    $j++;
+            }
+            $celula->setListaMembro($listaCelula1);
+	    $listaCelula[$i] = $celula;
+	    $i++;
+	}
+    }
+                
+	mysql_free_result($resultado);
+        $objDao->freebanco(); 
+        return $listaCelula;
+     }
+     /*fim
+      */
 }

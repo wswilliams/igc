@@ -1,8 +1,10 @@
    <?php
+   
   	class objetocelula{
 		private $nome; private $lider; private $rua; private $casa; private $bairro;
 		private $dia; private $status;private $estilo;private $id; 
 		private static $instance;
+                private $nomeMembro; private $listaMembro=array();
 
 		public function __construct()
 			{
@@ -32,6 +34,23 @@
 		       }
 	         }
 */
+                function getListaMembro() {
+                   return $this->listaMembro;
+                }
+
+                function setListaMembro($listaMembro=array()) {
+                   $this->listaMembro = $listaMembro;
+                }
+
+
+                function getNomeMembro() {
+                   return $this->nomeMembro;
+                }
+
+                function setNomeMembro($nomeMembro) {
+                   $this->nomeMembro = $nomeMembro;
+                }
+
 
 	        function getEstilo() {
                 return $this->estilo;
@@ -121,7 +140,12 @@
 		}
                 
                public function __toString(){
-                    return  $this->nome;
+                  $lista="";  
+                  foreach($this->listaMembro as $membros)
+                    {
+                       $lista.= $membros. "<br>";
+                    }
+                    return  $this->$lista;
                 }
 	};
 ?>

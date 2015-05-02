@@ -340,4 +340,18 @@ class controle {
      }
      /*fim
       */
+     
+      /*metodo para pesquisar membro da celula e retornar um lista
+      */
+     function relatorioDeCelulaControle(){
+      require_once ("control/dao.php");
+      
+      $objDao = dao::getInstance();
+      $listaCelula = array();
+      
+      return $listaCliente =$objDao->relatorioDeCelulaDao();
+      
+     }
+     /*fim
+      */
 }
