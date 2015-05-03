@@ -34,6 +34,7 @@ if(isset($_COOKIE["nome"])){
                         <td><form action = 'addMembronaCelula.php' method = 'post' >
                             <input type='hidden' name='id' value=" . $lista2[$indice2]->getId(). ">
                             <input type='hidden' name='lider' value=" . $lista2[$indice2]->getLider(). ">
+                            <input type='hidden' name='nomelider' value='" . $lista2[$indice2]->getNomeMembro(). "'>
                             <input type='hidden' name='nome' value='" . $lista2[$indice2]->getNome()."'>
                             <input type='hidden' name='estilo' value=" . $lista2[$indice2]->getEstilo().">
                             <input type='image' src='ICON/b_view.png' width='20' height='20' border='0' title = 'Adicionar Membros a Celula'>

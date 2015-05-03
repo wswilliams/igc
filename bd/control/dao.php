@@ -589,7 +589,7 @@ class dao {
       
       $objDao = Connection::getInstance();
       
-      $resultado = mysql_query("Select Codigo,CodLider,NomeCelula,Estilo from celulas") or die ("Nao foi possivel realizar a busca".mysql_error());
+      $resultado = mysql_query("Select c.Codigo,c.CodLider,m.Nome,c.NomeCelula,c.Estilo from celulas c join membros m on c.CodLider = m.Matricula") or die ("Nao foi possivel realizar a busca".mysql_error());
       $listaCelula = array();
       
       $i=0;
@@ -600,6 +600,7 @@ class dao {
                              
             $celula->setId($registro['Codigo']);
             $celula->setLider($registro['CodLider']);
+            $celula->setNomeMembro($registro['Nome']);
             $celula->setNome($registro['NomeCelula']);
             $celula->setEstilo($registro['Estilo']);
                         
@@ -871,44 +872,68 @@ class dao {
      /*fim
       */
      
-      /*metodo para pesquisar membros na celula e retornar um lista
+      /*metodo para listar todas as celula e retornar um lista
       */
-     function relatorioDeCelulaDao(){
+     function relatorioDeCelulaPart1Dao(){
       require_once ("conexao.php");
       require_once ("modelo/objetocelula.php");
       
       $objDao = Connection::getInstance();      
-      $resultado = mysql_query("Select c.Codigo,NomeCelula,c.Rua,c.Casa,c.Bairro,c.DiadaCelula,c.Status,m.Nome from celulas c join membros m on m.Matricula = c.codLider") or die ("Nao foi possivel realizar a busca".mysql_error());
+      $resultado = mysql_query("Select c.Codigo,m.Matricula,NomeCelula,c.Rua,c.Casa,c.Bairro,c.DiadaCelula,c.Status,m.Nome as Lider from celulas c join membros m on c.codLider = m.Matricula") or die ("Nao foi possivel realizar a busca 1".mysql_error());
+      
       $listaCelula = array();
       
-      $listaCelula1 = array();
       $i=0;
-      
+//      Select m.Nome from celulas c join celulamembro e on e.CodCelula = c.Codigo join membros m on e.CodMembro = m.Matricula where e.CodCelula = 7
     if($resultado){
           
       while ($registro = mysql_fetch_assoc($resultado)){              
 	    $celula = new objetocelula();
             $celula->setId($registro['Codigo']);
+            $celula->setIdMembro($registro['Matricula']);
             $celula->setNome($registro['NomeCelula']); $celula->setRua($registro['Rua']);
             $celula->setCasa($registro['Casa']); $celula->setBairro($registro['Bairro']);
             $celula->setDia($registro['DiadaCelula']); $celula->setStatus($registro['Status']);
-            $celula->setNomeMembro($registro['Nome']);
-            
-            $resultado1 = mysql_query("Select m.Nome from celulas c join celulamembro e on e.CodCelula = c.Codigo join membros m on e.CodMembro = m.Matricula where e.CodCelula = ".$celula->getId()) or die ("Nao foi possivel realizar a busca".mysql_error());
-            $j=0;
-            while ($registro1 = mysql_fetch_assoc($resultado1)){
-                    $listaCelula1[$j]=$registro['Nome'];
-                    $j++;
-            }
-            $celula->setListaMembro($listaCelula1);
+            $celula->setNomeMembro($registro['Lider']);
+          
 	    $listaCelula[$i] = $celula;
+	    $i++;
+	}
+    }
+        return $listaCelula;        
+	mysql_free_result($resultado);
+        $objDao->freebanco(); 
+        
+     }
+     /*fim
+      */
+     
+      /*metodo para listar todas as celula e retornar um lista
+      */
+     function relatorioDeCelulaPart2Dao($idCelula,$idMembro){
+      require_once ("conexao.php");
+      require_once ("modelo/objetoMembro.php");
+      
+      $objDao = Connection::getInstance();
+      $resultado = mysql_query("Select m.Nome from celulas c join celulamembro e on e.CodCelula = c.Codigo join membros m on e.CodMembro = m.Matricula where e.CodCelula = $idCelula and e.CodMembro = $idMembro") or die ("Nao foi possivel realizar a busca 2".mysql_error());
+      
+      $listaMembro = array();
+      
+      $i=0;
+
+    if($resultado){
+          
+      while ($registro = mysql_fetch_assoc($resultado)){              
+	    $membro = new objetoMembro();
+            $membro->setNome($registro['Nome']);
+	    $listaMembro[$i] = $membro;
 	    $i++;
 	}
     }
                 
 	mysql_free_result($resultado);
         $objDao->freebanco(); 
-        return $listaCelula;
+        return $listaMembro;
      }
      /*fim
       */

@@ -4,7 +4,7 @@
 		private $nome; private $lider; private $rua; private $casa; private $bairro;
 		private $dia; private $status;private $estilo;private $id; 
 		private static $instance;
-                private $nomeMembro; private $listaMembro=array();
+                private $nomeMembro; private $idMembro;
 
 		public function __construct()
 			{
@@ -34,14 +34,13 @@
 		       }
 	         }
 */
-                function getListaMembro() {
-                   return $this->listaMembro;
+                function getIdMembro() {
+                   return $this->idMembro;
                 }
 
-                function setListaMembro($listaMembro=array()) {
-                   $this->listaMembro = $listaMembro;
+                function setIdMembro($idMembro) {
+                   $this->idMembro = $idMembro;
                 }
-
 
                 function getNomeMembro() {
                    return $this->nomeMembro;
@@ -140,12 +139,7 @@
 		}
                 
                public function __toString(){
-                  $lista="";  
-                  foreach($this->listaMembro as $membros)
-                    {
-                       $lista.= $membros. "<br>";
-                    }
-                    return  $this->$lista;
+                    return  $this->nomeMembro;
                 }
 	};
 ?>

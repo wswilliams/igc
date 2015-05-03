@@ -6,34 +6,38 @@ function gerarRelatoriodecelulas(){
         
         require_once ("control/controle.php");
         require_once ("modelo/objetocelula.php");
-        
+        require_once ("modelo/objetoMembro.php");
         
         $obj = controle::getInstance();
         $lista = array();
+        $listaMembros = array();
         $celula =new objetocelula();
-        $lista = $obj->relatorioDeCelulaControle();
+        
+        $lista = $obj->relatorioDeCelulaPart1Controle();
         $chave = array_keys($lista);
+        
         
        $data = date('j/m/Y'); 
        $header = "<table class=\"tbl_header\" width=\"1000\"> 
 	               <tr> 
-	                 <td align=\"left\">Biblioteca mPDF</td> 
+	                 <td align=\"left\">Igreja Gera&ccedil;&otilde;es para Cristo</td> 
 	                 <td align=\"right\">Gerado em: $data</td> 
 	               </tr> 
 	             </table>";
        
        $footer = "<table class=\"tbl_footer\" width=\"1000\"> 
 	               <tr> 
-	                 <td align=\"left\"><a href=''>devwilliam.blogspot.com</a></td> 
+	                 <td align=\"left\"><a href=''>http://www/geracoesparacristo.com</a></td> 
 	                 <td align=\"right\">Página: {PAGENO}</td> 
 	               </tr> 
 	             </table>";  
        $tamanhoLista = sizeof($chave);
-       $retorno="";
+       $retorno=$header;
+                           
        if($tamanhoLista > 0){
 
        $retorno .= "<h2 style=\"text-align:center\">Relatorio das Celulas da IGC</h2>"; 
-	      $retorno .= "<table border='1' width='1000' align='center'> 
+       $retorno .= "<table border='1' width='1000' align='center'> 
 	           <tr class='header'> 
 	             <th>Celula</td> 
                      <th>Rua</td> 
@@ -41,7 +45,7 @@ function gerarRelatoriodecelulas(){
 	             <th>Bairro</td> 
                      <th>Dia</td>
                      <th>Estatus</td>
-                     <th>Membro</td> 
+                     <th>L&iacute;der</td> 
 	           </tr>"; 
 	     
                for ($index = 0; $index < $tamanhoLista; $index++) {
@@ -55,8 +59,19 @@ function gerarRelatoriodecelulas(){
                     $retorno .= "<td>".$lista[$indice]->getStatus()."</td>"; 
                     $retorno .= "<td>".$lista[$indice]->getNomeMembro()."</td>"; 
                     $retorno .= "<tr>"; 
-                    $retorno .= "<tr><td colspan='7'>".$lista[$indice]->__toString()."</td></tr>";
-           
+                    
+                   }
+                   $listaMembros = $obj->relatorioDeCelulaPart2Controle(5,9);
+                    $chaveIntena = array_keys($listaMembros);
+                    $tamanhoListaInterna = sizeof($chaveIntena);
+                    $retorno .= "<tr><td colspan='7'>tamanhoListaInterna: ".$tamanhoListaInterna."</td>";
+                    if($tamanhoListaInterna > 0){
+                        
+                        for ($i = 0; $i < $tamanhoListaInterna; $i++) {
+                             $indice = $chaveIntena[$i];
+                             $retorno .= "<tr><td colspan='7'>".$listaMembros[$i]->getNome()."</td>"; 
+                    }
+                    
 //                  $color = !$color; 
 //                echo $lista[$indice]->getNome();
                }
@@ -64,7 +79,8 @@ function gerarRelatoriodecelulas(){
                
            }else{
                $retorno .= "Consulta vazia";  
-           }   
+           }
+           $retorno .=$footer;
              //==============================================================
             //==============================================================
             //==============================================================

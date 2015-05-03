@@ -37,7 +37,7 @@ class controle {
       require_once ("control/dao.php");
       $objDao = dao::getInstance();
       
-      return $ret =$objDao->cadadastrarMembroDao($obj);
+      return $objDao->cadadastrarMembroDao($obj);
      }
      /*fim
       */
@@ -50,9 +50,8 @@ class controle {
       require_once ("modelo/objetoMembro.php");
       
       $objDao = dao::getInstance();
-      $objetoMembro = new objetoMembro();
       
-      return $objetoMembro =$objDao->pesquisarMembroDao($obj);
+      return $objDao->pesquisarMembroDao($obj);
       
      }
      /*fim
@@ -66,9 +65,8 @@ class controle {
       require_once ("modelo/objetoMembro.php");
       
       $objDao = dao::getInstance();
-      $objetoMembro = new objetoMembro();
       
-      return $objetoMembro =$objDao->pesquisarMembroMatriculaDao($matricula);
+      return $objDao->pesquisarMembroMatriculaDao($matricula);
       
      }
      /*fim
@@ -81,7 +79,7 @@ class controle {
       require_once ("control/dao.php");
       $objDao = dao::getInstance();
       
-      return $ret =$objDao->cadadastrarCelulaDao($obj);
+      return $objDao->cadadastrarCelulaDao($obj);
      }
      /*fim
       */
@@ -93,7 +91,7 @@ class controle {
       require_once ("control/dao.php");
       $objDao = dao::getInstance();
       
-      return $ret =$objDao->cadadastrarCartaDao($mat,$tip,$data);
+      return $objDao->cadadastrarCartaDao($mat,$tip,$data);
      }
      /*fim
       */
@@ -105,7 +103,7 @@ class controle {
       require_once ("control/dao.php");
       $objDao = dao::getInstance();
       
-      return $ret =$objDao->validarLoginDao($login,$senha);
+      return $objDao->validarLoginDao($login,$senha);
       
      }
      /*fim
@@ -117,9 +115,8 @@ class controle {
       require_once ("control/dao.php");
       require_once ("modelo/objetoMembro.php");
       $objDao = dao::getInstance();
-      $objMembro = new objetoMembro();
       
-      return $objMembro =$objDao->excluirMembrodaCelulaDao($codCelula,$matricula);
+      return $objDao->excluirMembrodaCelulaDao($codCelula,$matricula);
       
      }
      /*fim
@@ -132,7 +129,7 @@ class controle {
       
       $objDao = dao::getInstance();
       
-      return $ret =$objDao->updateMembroDao($objeto);
+      return $objDao->updateMembroDao($objeto);
       
      }
      /*fim
@@ -146,9 +143,8 @@ class controle {
       require_once ("modelo/objetocelula.php");
       
       $objDao = dao::getInstance();
-      $celula = new objetocelula();
       
-      return $objetoMembro =$objDao->pesquisarCelulaDao($obj);
+      return $objDao->pesquisarCelulaDao($obj);
       
      }
      /*fim
@@ -161,9 +157,8 @@ class controle {
       require_once ("modelo/objetoMembro.php");
       
       $objDao = dao::getInstance();
-      $objMembro = new objetoMembro();
       
-      return $objMembro =$objDao->incluirMembrosnaCelulaDao($matricula,$celula);
+      return $objDao->incluirMembrosnaCelulaDao($matricula,$celula);
       
      }
      /*fim
@@ -176,9 +171,8 @@ class controle {
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      $listaCliente = array();
       
-      return $listaCliente =$objDao->listadeMembrodaDao($nome);
+      return $objDao->listadeMembrodaDao($nome);
       
      }
      /*fim
@@ -190,9 +184,8 @@ class controle {
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      $listaCelula = array();
       
-      return $listaCliente =$objDao->listadeMembroCelulaDao($matricula);
+      return $objDao->listadeMembroCelulaDao($matricula);
       
      }
      /*fim
@@ -204,9 +197,8 @@ class controle {
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      $listaCliente = array();
       
-      return $listaCliente =$objDao->listadeTodosMembroDao();
+      return $objDao->listadeTodosMembroDao();
       
      }
      /*fim
@@ -218,9 +210,8 @@ class controle {
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      $listaCliente = array();
       
-      return $listaCliente =$objDao->listadeMembroativosDao();
+      return $objDao->listadeMembroativosDao();
       
      }
      /*fim
@@ -232,9 +223,8 @@ class controle {
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      $lista = array();
       
-      return $lista =$objDao->listaTodasCelulasDao();
+      return $objDao->listaTodasCelulasDao();
       
      }
      /*fim
@@ -246,9 +236,8 @@ class controle {
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      $lista = array();
       
-      return $lista =$objDao->listaTodosAniversariantesdoMes($mes);
+      return $objDao->listaTodosAniversariantesdoMes($mes);
       
      }
      
@@ -262,9 +251,8 @@ class controle {
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      $lista = array();
       
-      return $lista =$objDao->listaTodosAniversariantesdeHojeDao();
+      return $objDao->listaTodosAniversariantesdeHojeDao();
       
      }
      
@@ -277,9 +265,8 @@ class controle {
  function listadeMembroPorNome($nome){
       require_once ("control/dao.php");
       $objDao = dao::getInstance();
-      $lista = array();
       
-      return $lista =$objDao->listadeMembroPorNome($nome);
+      return $objDao->listadeMembroPorNome($nome);
      }
      /*fim
       */
@@ -292,9 +279,8 @@ class controle {
  function listadeMembroPorSexoControle($sexo){
       require_once ("control/dao.php");
       $objDao = dao::getInstance();
-      $lista = array();
       
-      return $lista =$objDao->listaTodasMembroPorsexoDao($sexo);
+      return $objDao->listaTodasMembroPorsexoDao($sexo);
      }
      /*fim
       */
@@ -305,9 +291,8 @@ class controle {
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      $listaCarta = array();
       
-      return $listaCarta =$objDao->listadeTodasCartaDao();
+      return $objDao->listadeTodasCartaDao();
       
      }
      /*fim
@@ -319,9 +304,8 @@ class controle {
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      $listaEmail = array();
       
-      return $listaEmail =$objDao->listadeTodosEmailDao();
+      return $objDao->listadeTodosEmailDao();
       
      }
      /*fim
@@ -333,23 +317,34 @@ class controle {
       require_once ("../control/dao.php");
       
       $objDao = dao::getInstance();
-      $listaLider = array();
       
-      return $listaLider =$objDao->listadeTodosLiderDao();
+      return $objDao->listadeTodosLiderDao();
       
      }
      /*fim
       */
      
-      /*metodo para pesquisar membro da celula e retornar um lista
+      /*metodo para listar todas as celula e retornar um lista
       */
-     function relatorioDeCelulaControle(){
+     function relatorioDeCelulaPart1Controle(){
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
-      $listaCelula = array();
       
-      return $listaCliente =$objDao->relatorioDeCelulaDao();
+      return $objDao->relatorioDeCelulaPart1Dao();
+      
+     }
+     /*fim
+      */
+     
+     /*metodo para listar todas as celula e retornar um lista
+      */
+     function relatorioDeCelulaPart2Controle($idCelula,$idMembro){
+      require_once ("control/dao.php");
+      
+      $objDao = dao::getInstance();
+      
+      return $objDao->relatorioDeCelulaPart2Dao($idCelula,$idMembro);
       
      }
      /*fim

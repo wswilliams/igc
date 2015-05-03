@@ -7,6 +7,7 @@ function addMembroNaCelula() {
         $nome = $_COOKIE["nome"];
         $id = $_POST["id"];
         $lider=$_POST["lider"];
+        $nomeLider = $_POST["nomelider"];
         $nomeCelula=$_POST["nome"];
         $estiloCelula=$_POST["estilo"];
         
@@ -80,11 +81,11 @@ function addMembroNaCelula() {
                 <div class='panel-heading'>Celula</div>
                   <table class='table'>
                     <tr>
-                      <td>Celula</td><td>CodCelula</td>
+                        <td>Celula</td><td>L&iacute;der</td>
                     </tr>
                     <tr>
                         <td><?php echo $nomeCelula; ?></td>
-                        <td><?php echo $id; ?></td>
+                        <td><?php echo $nomeLider; ?></td>
                     </tr>
                   </table> 
           </div>
