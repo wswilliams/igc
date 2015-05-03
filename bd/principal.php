@@ -68,7 +68,7 @@ function principal() {
               </a>
             </div>
             <div class="col-xs-6 col-md-3">
-              <a href="#" class="thumbnail">
+              <a href="escoladelider.php" class="thumbnail">
                 <img src="ICON/computer-24944_150.png" width="40" height="30" border="0" title = "Escola de Lideres">
                  <h6>Escola de Lideres</h6>
               </a>
