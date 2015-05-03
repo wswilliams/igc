@@ -56,7 +56,7 @@ class objetoMembro{
                  }
 
                  public function setNome($nome) {
-                     $this->nome = $nome;
+                     $this->nome = mb_strtoupper($nome);
                  }
 
                  public function setSexo($sexo) {
@@ -80,11 +80,11 @@ class objetoMembro{
                  }
 
                  public function setNatural($natural) {
-                     $this->natural = $natural;
+                     $this->natural = mb_strtoupper($natural);
                  }
 
                  public function setProfissao($profissao) {
-                     $this->profissao = $profissao;
+                     $this->profissao = mb_strtoupper($profissao);
                  }
 
                  public function setEscola($escola) {
@@ -92,15 +92,15 @@ class objetoMembro{
                  }
 
                  public function setPai($pai) {
-                     $this->pai = $pai;
+                     $this->pai = mb_strtoupper($pai);
                  }
 
                  public function setMae($mae) {
-                     $this->mae = $mae;
+                     $this->mae = mb_strtoupper($mae);
                  }
 
                  public function setNecessidade($necessidade) {
-                     $this->necessidade = $necessidade;
+                     $this->necessidade = mb_strtoupper($necessidade);
                  }
 
                  public function setFone($fone) {
@@ -120,11 +120,11 @@ class objetoMembro{
                  }
 
                  public function setFuncao($funcao) {
-                     $this->funcao = $funcao;
+                     $this->funcao =mb_strtoupper($funcao);
                  }
 
                  public function setParticipou($participou) {
-                     $this->participou = $participou;
+                     $this->participou = mb_strtoupper($participou);
                  }
 
                  public function setTrabalhando($trabalhando) {
@@ -140,11 +140,11 @@ class objetoMembro{
                  }
 
                  public function setRua($rua) {
-                     $this->rua = $rua;
+                     $this->rua = mb_strtoupper($rua);
                  }
 
                  public function setBairro($bairro) {
-                     $this->bairro = $bairro;
+                     $this->bairro = mb_strtoupper($bairro);
                  }
 
                  public function setCasa($casa) {
@@ -275,10 +275,10 @@ class objetoMembro{
 		function valida($nome, $sexo,$data,$rg,$cpf,$estadocivil,$natural,$profissao,$escola,$pai,$mae,$necessidade,
 			$fone,$filho,$formacao,$membrasia,$funcao,$participou,$trabalhando,$viajando,$congrega,$rua,$casa,$bairro,$email,$lider){
 		
-			$this->nome=$nome; $this->sexo=$sexo; $this->data=$data; $this->rg=$rg; $this->cpf=$cpf; $this->estadocivil=$estadocivil;
-			$this->natural = $natural; $this->profissao =$profissao; $this->escola=$escola; $this->pai=$pai; $this->mae=$mae; $this->necessidade=$necessidade;
-			$this->fone=$fone; $this->filho=$filho; $this->formacao=$formacao; $this->membrasia=$membrasia; $this->funcao=$funcao; $this->participou=$participou;
-			$this->trabalhando=$trabalhando; $this->viajando = $viajando; $this->congrega = $congrega; $this->rua = $rua;  $this->casa = $casa;$this->bairro = $bairro;
+			$this->nome=mb_strtoupper($nome); $this->sexo=$sexo; $this->data=$data; $this->rg=$rg; $this->cpf=$cpf; $this->estadocivil=$estadocivil;
+			$this->natural = mb_strtoupper($natural); $this->profissao =mb_strtoupper($profissao); $this->escola=$escola; $this->pai=mb_strtoupper($pai); $this->mae=mb_strtoupper($mae); $this->necessidade=mb_strtoupper($necessidade);
+			$this->fone=$fone; $this->filho=$filho; $this->formacao=$formacao; $this->membrasia=$membrasia; $this->funcao=mb_strtoupper($funcao); $this->participou=mb_strtoupper($participou);
+			$this->trabalhando=$trabalhando; $this->viajando = $viajando; $this->congrega = $congrega; $this->rua = mb_strtoupper($rua);  $this->casa = mb_strtoupper($casa);$this->bairro = mb_strtoupper($bairro);
                         $this->email=$email;$this->lider=$lider;
 		}
 		

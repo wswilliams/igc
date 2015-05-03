@@ -879,7 +879,7 @@ class dao {
       require_once ("modelo/objetocelula.php");
       
       $objDao = Connection::getInstance();      
-      $resultado = mysql_query("Select c.Codigo,m.Matricula,NomeCelula,c.Rua,c.Casa,c.Bairro,c.DiadaCelula,c.Status,m.Nome as Lider from celulas c join membros m on c.codLider = m.Matricula") or die ("Nao foi possivel realizar a busca 1".mysql_error());
+      $resultado = mysql_query("Select c.Codigo,m.Matricula,NomeCelula,c.Rua,c.Casa,c.Bairro,c.DiadaCelula,c.Status,m.Nome as Lider from celulas c join membros m on c.codLider = m.Matricula order by c.NomeCelula") or die ("Nao foi possivel realizar a busca 1".mysql_error());
       
       $listaCelula = array();
       
@@ -912,10 +912,10 @@ class dao {
       */
      function relatorioDeCelulaPart2Dao($idCelula,$idMembro){
       require_once ("conexao.php");
-      require_once ("modelo/objetoMembro.php");
+      require_once ("modelo/objetocelula.php");
       
       $objDao = Connection::getInstance();
-      $resultado = mysql_query("Select m.Nome from celulas c join celulamembro e on e.CodCelula = c.Codigo join membros m on e.CodMembro = m.Matricula where e.CodCelula = $idCelula and e.CodMembro = $idMembro") or die ("Nao foi possivel realizar a busca 2".mysql_error());
+      $resultado = mysql_query("Select c.NomeCelula, m.Nome from celulas c join celulamembro e on e.CodCelula = c.Codigo join membros m on e.CodMembro = m.Matricula order by c.NomeCelula") or die ("Nao foi possivel realizar a busca 2".mysql_error());
       
       $listaMembro = array();
       
@@ -924,9 +924,10 @@ class dao {
     if($resultado){
           
       while ($registro = mysql_fetch_assoc($resultado)){              
-	    $membro = new objetoMembro();
-            $membro->setNome($registro['Nome']);
-	    $listaMembro[$i] = $membro;
+	    $celula = new objetocelula();
+            $celula->setNome($registro['NomeCelula']);
+            $celula->setNomeMembro($registro['Nome']);
+	    $listaMembro[$i] = $celula;
 	    $i++;
 	}
     }

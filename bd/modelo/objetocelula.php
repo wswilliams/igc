@@ -129,7 +129,7 @@
 
 		function valida($nome, $lider,$rua,$casa,$bairro,$dia,$estilo,$status){
 
-			$this->nome=$nome; $this->lider=$lider; $this->rua=$rua; $this->casa=$casa; $this->bairro=$bairro;
+			$this->nome=mb_strtoupper($nome); $this->lider=$lider; $this->rua=mb_strtoupper($rua); $this->casa=mb_strtoupper($casa); $this->bairro=mb_strtoupper($bairro);
 			$this->dia = $dia;$this->estilo=$estilo; $this->status=$status;
 		}
 		function valida1($id,$nome, $lider,$rua,$casa,$bairro,$dia,$estilo,$status){

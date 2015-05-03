@@ -6,7 +6,6 @@ function gerarRelatoriodecelulas(){
         
         require_once ("control/controle.php");
         require_once ("modelo/objetocelula.php");
-        require_once ("modelo/objetoMembro.php");
         
         $obj = controle::getInstance();
         $lista = array();
@@ -36,7 +35,7 @@ function gerarRelatoriodecelulas(){
                            
        if($tamanhoLista > 0){
 
-       $retorno .= "<h2 style=\"text-align:center\">Relatorio das Celulas da IGC</h2>"; 
+       $retorno .= "<h2 style=\"text-align:center\">Relat&oacute;rio das Celulas da IGC</h2>"; 
        $retorno .= "<table border='1' width='1000' align='center'> 
 	           <tr class='header'> 
 	             <th>Celula</td> 
@@ -59,17 +58,18 @@ function gerarRelatoriodecelulas(){
                     $retorno .= "<td>".$lista[$indice]->getStatus()."</td>"; 
                     $retorno .= "<td>".$lista[$indice]->getNomeMembro()."</td>"; 
                     $retorno .= "<tr>"; 
-                    
                    }
-                   $listaMembros = $obj->relatorioDeCelulaPart2Controle(5,9);
-                    $chaveIntena = array_keys($listaMembros);
-                    $tamanhoListaInterna = sizeof($chaveIntena);
-                    $retorno .= "<tr><td colspan='7'>tamanhoListaInterna: ".$tamanhoListaInterna."</td>";
+                   
+                   $listaMembros = $obj->relatorioDeCelulaPart2Controle();
+                   $chaveIntena = array_keys($listaMembros);
+                   $tamanhoListaInterna = sizeof($chaveIntena);
+                   $retorno .= "<tr><td colspan='7' align='center'><b>LISTA DE INTEGRANTES POR CELULA</b></td></tr>";
                     if($tamanhoListaInterna > 0){
                         
                         for ($i = 0; $i < $tamanhoListaInterna; $i++) {
                              $indice = $chaveIntena[$i];
-                             $retorno .= "<tr><td colspan='7'>".$listaMembros[$i]->getNome()."</td>"; 
+                             $retorno .= "<tr><td colspan='3'><b>".$listaMembros[$i]->getNome()."</b></td>";
+                             $retorno .= "<td colspan='4'>".$listaMembros[$i]->getNomeMembro()."</td></tr>";
                     }
                     
 //                  $color = !$color; 
@@ -93,28 +93,6 @@ function gerarRelatoriodecelulas(){
             $mpdf->Output();
             exit;
              
-             
-             
-             
-//             $html = '
-//<style>
-//table { border-collapse: collapse; margin-top: 0; text-align: center; }
-//td { padding: 0.5em; }
-//h1 { margin-bottom: 0; }z
-//</style>
-//
-//<table>
-//<tr><td><input type="image" src="ICON/LOGO CARTA.jpg" width="100%" height="70%" border="0"><br><br><br><br><br><br><br><br></td></tr>
-//<tr><td align = "center" style="font-size: 14pt">CARTA DE RECOMENDAÇÃO<br><br><br><br><br><br><br></td></tr>
-//<tr><td align = "justify" style="font-size: 14pt">
-//A Igreja Evangélica Pentecostal Gerações Para Cristo <b>RECOMENDA</b> por meio desta que o amado e querido irmão em Cristo
-//Jesus<b> '.$nome.' e família</b>, encontram-se em comunhão com está Igreja do Senhor Jesus Cristo, podendo assim
-//ser recebido como convém aos santos.<br><br><br><br><br><br><br><br><br><br><br><br><br><br></td></tr>
-//<tr><td><input type="image" src="ICON/ASSINATURA.png" width="100%" height="5%" border="0"></td></tr><tr>
-//</table>
-//
-//';
-
 
     }else{
         

@@ -10,13 +10,13 @@ if (isset($_COOKIE["nome"])) {
         $control = controle::getInstance();
         require_once ("modelo/objetocelula.php");
         
-        $nome = mb_strtoupper($_POST["nome"]);
+        $nome = $_POST["nome"];
         $lider = $_POST["lider"];
-        $bairro = mb_strtoupper($_POST["bairro"]);
-        $rua = mb_strtoupper($_POST["rua"]);
-        $casa = mb_strtoupper($_POST["casa"]);
-        $dia = mb_strtoupper($_POST["dia"]);
-	$estilo = mb_strtoupper($_POST["estilo"]);
+        $bairro = $_POST["bairro"];
+        $rua = $_POST["rua"];
+        $casa = $_POST["casa"];
+        $dia = $_POST["dia"];
+	$estilo = $_POST["estilo"];
         $status="ATIVA";
         
         $celula =new objetocelula();

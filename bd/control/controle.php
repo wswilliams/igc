@@ -339,12 +339,12 @@ class controle {
      
      /*metodo para listar todas as celula e retornar um lista
       */
-     function relatorioDeCelulaPart2Controle($idCelula,$idMembro){
+     function relatorioDeCelulaPart2Controle(){
       require_once ("control/dao.php");
       
       $objDao = dao::getInstance();
       
-      return $objDao->relatorioDeCelulaPart2Dao($idCelula,$idMembro);
+      return $objDao->relatorioDeCelulaPart2Dao();
       
      }
      /*fim
