@@ -8,7 +8,8 @@ function  corpo_Escola(){
 $ok="";
 if(isset($_COOKIE["nome"])){
      
-$ok.="<div class='row'>
+$ok.="<div class='row' id='cadastrar_escola'>
+             <br><br><br>
         <div class='col-md-12'>
                 <div class='form-group form-group-sm'>
                    <form id='cadastrar_celula' class='form-horizontal' action='' method='POST' onclick ='return cadastrarEscola();'> 
@@ -24,7 +25,7 @@ $ok.="<div class='row'>
                         </div>
                         <label class='col-sm-2 control-label' for='formGroupInputSmall'>Data Final</label>
                         <div class='col-sm-10'>
-                          <input id='dtfinal' class='form-control' type='text' placeholder='99/99/9999' id='formGroupInputSmall' required='required' name='dtfinal' />
+                          <input id='dtfim' class='form-control' type='text' placeholder='99/99/9999' id='formGroupInputSmall' required='required' name='dtfinal' />
                           <br>
                         </div>
                         

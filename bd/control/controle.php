@@ -96,6 +96,19 @@ class controle {
      /*fim
       */
      
+      /*metodo para cadastrar uma escola
+      * e retorna um 0 cadastro realizado com sucesso 1 falha
+      */
+     public function cadadastrarEscolaControle(objetoEscola $obj){
+      require_once ("control/dao.php");
+      $objDao = dao::getInstance();
+      
+      return $objDao->cadadastrarEscolaDao($obj);
+     }
+     /*fim
+      */
+
+     
           /*metodo para cadastrar uma celula que recebe como parametro um objeto celula
       * e retorna um inteiro
       */

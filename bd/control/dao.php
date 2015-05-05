@@ -271,6 +271,49 @@ class dao {
      /*fim
       */
      
+       /*metodo para cadastrar uma escola
+      * e retorna um 0 cadastro realizado com sucesso 1 falha
+      */
+     public function cadadastrarEscolaDao(objetoEscola $escola){
+      
+        require_once ("conexao.php");
+    
+        $obj = Connection::getInstance();
+        $ret=3;
+        $nome = $escola->getNome();
+        $dtinicio = date($escola->getDtinicio());
+        $dtfim=date($escola->getDtfim());
+        
+        $string = "SELECT id FROM escolade_lideres where Nome LIKE '%$nome%'";
+        $busca = mysql_query($string) or die ("Nao foi possivel realizar a busca".mysql_error());
+        $reg = mysql_fetch_assoc($busca);
+        
+	if($reg != ""){
+            $ret = 1;
+        }
+        else{
+             	
+             $inse = "INSERT INTO escolade_lideres (Id,Nome,DataInicio,DataFim)VALUES('','$nome','$dtinicio','$dtfim')";
+             $result = mysql_query($inse) or die ("Falha na insercao da escola".mysql_error());
+
+            if ($result)
+              {
+                $ret = 0;
+                
+              }else{
+
+               $ret = 2;
+              }
+        }
+        
+        mysql_free_result($busca);
+        $obj->freebanco();
+      
+      return $ret;
+     }
+     /*fim
+      */
+     
      /*metodo para cadastrar uma celula que recebe como parametro um objeto celula
       * e retorna um inteiro
       */
