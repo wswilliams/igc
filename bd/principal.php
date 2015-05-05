@@ -4,6 +4,9 @@ function principal() {
 
     if ($_COOKIE["nome"]) {
         $nome = $_COOKIE["nome"];
+        
+        if(strcasecmp ($nome,"WILLIAMSSILVA")==0){
+        
         ?>
         <!DOCTYPE html>
         <html lang="en">
@@ -137,13 +140,14 @@ function principal() {
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     </body>
+          
         
-        
-        
-        
-        <?php
+    <?php
+        }else{
+            header("Location: cadastroigc.php");
+        }
     } else {
-        header("Location: Index.php?");
+        header("Location: ../index.php");
     }
 }
 
